@@ -1,0 +1,25 @@
+@media (max-width: 768px) {
+
+  .container {
+    padding: 10px;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .card {
+    height: auto;
+  }
+
+  table {
+    font-size: 12px;
+    overflow-x: auto;
+    display: block;
+  }
+
+  input, select, button {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
