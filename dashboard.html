@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard | PBA</title>
+  <link rel="stylesheet" href="css/dashboard.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="topbar">
+  <h2>PHILIPPINE BANKING ASSOCIATION</h2>
+  <button onclick="logout()">Logout</button>
+</div>
+
+<div class="container">
+
+  <!-- USER INFO -->
+  <div class="welcome">
+    <h3 id="name">Welcome</h3>
+    <p id="acc">Account</p>
+  </div>
+
+  <!-- BALANCE CARD -->
+  <div class="balance-card">
+    <h4>Available Balance</h4>
+    <h1 id="balance">₱0.00</h1>
+  </div>
+
+  <!-- PREMIUM CARD -->
+  <div class="card">
+    <div class="chip"></div>
+    <p class="bank">PHILIPPINE BANKING ASSOCIATION</p>
+    <p class="number">**** **** **** 4567</p>
+    <p class="holder" id="holder">CARD HOLDER</p>
+  </div>
+
+  <!-- QUICK ACTIONS -->
+  <div class="actions">
+    <button onclick="cashIn()">💵 Cash In</button>
+    <button onclick="withdraw()">💸 Withdraw</button>
+    <button onclick="transfer()">🔄 Transfer</button>
+  </div>
+
+  <!-- CHART -->
+  <div class="chart-box">
+    <canvas id="chart"></canvas>
+  </div>
+
+  <!-- TRANSACTIONS -->
+  <div class="transactions">
+    <h3>Recent Transactions</h3>
+    <ul id="txList"></ul>
+  </div>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+</body>
+</html>
