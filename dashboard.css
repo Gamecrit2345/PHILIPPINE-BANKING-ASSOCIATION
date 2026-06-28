@@ -204,3 +204,78 @@ margin-bottom:40px;
 display:flex;
 justify-content:space-between;
 }
+/* TOP ACTION BUTTON */
+
+.actions{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.icon-btn{
+background:rgba(255,255,255,.1);
+border:none;
+color:white;
+padding:10px;
+border-radius:10px;
+cursor:pointer;
+}
+
+/* DARK MODE */
+
+body.dark{
+background:#050b18;
+}
+
+body.dark .sidebar{
+background:#000814;
+}
+
+body.dark .balance-card{
+background:linear-gradient(135deg,#111827,#1f2937);
+}
+
+/* CHART */
+
+.chart{
+margin-top:15px;
+display:flex;
+align-items:flex-end;
+gap:10px;
+height:150px;
+width:420px;
+padding:15px;
+background:rgba(255,255,255,.05);
+border-radius:15px;
+}
+
+.chart div{
+flex:1;
+background:#00b4ff;
+border-radius:8px;
+transition:.3s;
+}
+
+.chart div:hover{
+background:#38bdf8;
+transform:scaleY(1.1);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.sidebar{
+display:none;
+}
+
+.content{
+padding:20px;
+}
+
+.balance-card,
+.chart{
+width:100%;
+}
+
+}
