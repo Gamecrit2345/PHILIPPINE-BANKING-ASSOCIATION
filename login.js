@@ -4,7 +4,7 @@ const username=document.getElementById("username").value;
 
 const password=document.getElementById("password").value;
 
-if(Enter your password){
+if(username==="100000573092" && password==="765432"){
 
 window.location="loading.html";
 
