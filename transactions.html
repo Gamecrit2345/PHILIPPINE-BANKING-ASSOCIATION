@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Transactions | PBA</title>
+  <link rel="stylesheet" href="css/transactions.css">
+</head>
+<body>
+
+<div class="container">
+
+  <h2>Transaction History</h2>
+
+  <!-- SEARCH -->
+  <input type="text" id="search" placeholder="Search transactions..." onkeyup="loadTx()">
+
+  <!-- FILTER -->
+  <select id="filter" onchange="loadTx()">
+    <option value="all">All</option>
+    <option value="Cash In">Cash In</option>
+    <option value="Withdraw">Withdraw</option>
+    <option value="Transfer">Transfer</option>
+  </select>
+
+  <!-- TABLE -->
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Amount</th>
+        <th>To</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Ref</th>
+      </tr>
+    </thead>
+    <tbody id="txTable"></tbody>
+  </table>
+
+</div>
+
+<script src="js/transactions.js"></script>
+</body>
+</html>
