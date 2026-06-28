@@ -151,3 +151,56 @@ padding:18px;
 border-bottom:1px solid rgba(255,255,255,.08);
 
 }
+/* TOPBAR */
+
+.topbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:20px;
+}
+
+.user{
+font-size:18px;
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.notif{
+font-size:20px;
+cursor:pointer;
+}
+
+/* CARD */
+
+.card{
+margin-top:20px;
+width:420px;
+height:220px;
+background:linear-gradient(135deg,#1a237e,#0d47a1,#42a5f5);
+border-radius:20px;
+padding:20px;
+box-shadow:0 15px 40px rgba(0,0,0,.4);
+position:relative;
+overflow:hidden;
+}
+
+.chip{
+width:50px;
+height:35px;
+background:#d4af37;
+border-radius:8px;
+margin-bottom:30px;
+}
+
+.card-number{
+letter-spacing:3px;
+font-size:20px;
+margin-bottom:40px;
+}
+
+.card-info{
+display:flex;
+justify-content:space-between;
+}
