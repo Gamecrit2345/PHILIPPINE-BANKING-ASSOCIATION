@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+
+<title>Loading...</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+color:white;
+
+}
+
+.loader{
+
+width:90px;
+
+height:90px;
+
+border:8px solid rgba(255,255,255,.2);
+
+border-top:8px solid white;
+
+border-radius:50%;
+
+animation:spin 1s linear infinite;
+
+margin-bottom:25px;
+
+}
+
+@keyframes spin{
+
+100%{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="loader"></div>
+
+<h2>Signing in securely...</h2>
+
+<p>Please wait...</p>
+
+<script>
+
+setTimeout(function(){
+
+window.location="dashboard.html";
+
+},3000);
+
+</script>
+
+</body>
+
+</html>
