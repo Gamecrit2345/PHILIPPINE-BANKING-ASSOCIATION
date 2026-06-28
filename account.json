@@ -1,0 +1,32 @@
+[
+  {
+    "account": "100000000001",
+    "password": "123456",
+    "name": "Juan Dela Cruz",
+    "balance": 152450.20
+  },
+  {
+    "account": "100000000002",
+    "password": "123456",
+    "name": "Maria Santos",
+    "balance": 98500.75
+  },
+  {
+    "account": "100000000003",
+    "password": "123456",
+    "name": "Carlos Reyes",
+    "balance": 45000.00
+  },
+  {
+    "account": "100000000004",
+    "password": "123456",
+    "name": "Ana Lopez",
+    "balance": 250000.10
+  },
+  {
+    "account": "100000000005",
+    "password": "123456",
+    "name": "Miguel Cruz",
+    "balance": 78000.50
+  }
+]
