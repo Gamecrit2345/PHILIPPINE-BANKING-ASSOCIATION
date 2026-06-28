@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Transfer | PBA</title>
+  <link rel="stylesheet" href="css/transfer.css">
+</head>
+<body>
+
+<div class="container">
+
+  <h2>Transfer Funds</h2>
+
+  <div class="box">
+
+    <label>Amount</label>
+    <input type="number" id="amount" placeholder="₱0.00">
+
+    <label>Send To</label>
+    <select id="bank">
+      <option>GCash</option>
+      <option>Maya</option>
+      <option>KOOP</option>
+    </select>
+
+    <button onclick="send()">Transfer</button>
+
+  </div>
+
+  <div id="receipt" class="receipt hidden"></div>
+
+</div>
+
+<script src="js/transfer.js"></script>
+</body>
+</html>
