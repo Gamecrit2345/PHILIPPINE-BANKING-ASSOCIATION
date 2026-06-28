@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  font-family: system-ui, Arial;
+  background: #0f172a;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* smooth pages */
+* {
+  transition: all 0.2s ease;
+}
+
+/* glass effect */
+.glass {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* buttons */
+button {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* fade in pages */
+.page {
+  animation: fade 0.4s ease;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
