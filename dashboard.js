@@ -7,35 +7,29 @@ localStorage.setItem("balance", balance);
 
 balance = Number(balance);
 
-function updateBalance(){
+/* BALANCE */
 
+function updateBalance(){
 document.getElementById("balance").innerText =
 "₱" + balance.toLocaleString() + ".00";
-
 localStorage.setItem("balance", balance);
-
 }
 
-/* ANIMATED UPDATE */
+/* ANIMATION */
 
-function animateBalanceChange(oldVal, newVal){
+function animate(oldVal, newVal){
 
 let obj = {val: oldVal};
 
 let interval = setInterval(() => {
 
-if(obj.val < newVal){
-obj.val++;
-}else if(obj.val > newVal){
-obj.val--;
-}
+if(obj.val < newVal) obj.val++;
+else if(obj.val > newVal) obj.val--;
 
 document.getElementById("balance").innerText =
 "₱" + obj.val.toLocaleString() + ".00";
 
-if(obj.val === newVal){
-clearInterval(interval);
-}
+if(obj.val === newVal) clearInterval(interval);
 
 }, 10);
 
@@ -50,10 +44,9 @@ let amount = Number(prompt("Cash In Amount"));
 if(amount > 0){
 
 let old = balance;
-
 balance += amount;
 
-animateBalanceChange(old, balance);
+animate(old, balance);
 
 addHistory("Cash In", amount, "lime");
 
@@ -70,10 +63,9 @@ let amount = Number(prompt("Send Amount"));
 if(amount > 0 && amount <= balance){
 
 let old = balance;
-
 balance -= amount;
 
-animateBalanceChange(old, balance);
+animate(old, balance);
 
 addHistory("Send Money", -amount, "red");
 
@@ -93,7 +85,7 @@ let row = `
 <tr>
 <td>Today</td>
 <td>${type}</td>
-<td style="color:${color};">
+<td style="color:${color}">
 ${amount > 0 ? "+" : ""}₱${Math.abs(amount).toLocaleString()}
 </td>
 </tr>`;
@@ -101,11 +93,18 @@ ${amount > 0 ? "+" : ""}₱${Math.abs(amount).toLocaleString()}
 document.getElementById("history").innerHTML =
 row + document.getElementById("history").innerHTML;
 
-localStorage.setItem("history", document.getElementById("history").innerHTML);
+localStorage.setItem("history",
+document.getElementById("history").innerHTML);
 
 }
 
-/* LOAD HISTORY */
+/* DARK MODE */
+
+function toggleDarkMode(){
+document.body.classList.toggle("dark");
+}
+
+/* AUTO LOGIN CHECK */
 
 window.onload = function(){
 
@@ -118,3 +117,10 @@ document.getElementById("history").innerHTML = saved;
 updateBalance();
 
 };
+
+/* SECURITY (basic demo) */
+
+if(!localStorage.getItem("loggedIn")){
+// optional future upgrade
+localStorage.setItem("loggedIn", "true");
+}
